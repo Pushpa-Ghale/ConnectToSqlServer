@@ -31,16 +31,10 @@ namespace sqltest2
                     Main(args);
                     break;
             }
-
-
-
-
-
         }
 
         public static void InsertRecord()
         {
-
             Console.WriteLine("please insert id");
             string cid = Console.ReadLine();
 
@@ -56,18 +50,14 @@ namespace sqltest2
             Console.WriteLine("please insert your phone number");
             string phonenumber = Console.ReadLine();
 
-
             string cmdStr = $"insert into customer(cust_ID, fname, lname, address, phnum ) values ('{cid}' , '{firstname}', '{lastname}', '{address}', {phonenumber})";
             Console.WriteLine(cmdStr);
 
-
             ExecuteSqlCmd(cmdStr);
-
         }
 
         public static void UpdateRecord()
         {
-
             Console.WriteLine("Please enter the valid customer ID to update the record");
             string cid = Console.ReadLine();
 
@@ -82,12 +72,10 @@ namespace sqltest2
 
             Console.WriteLine("Please enter the newest phone number");
             string phonenumber = Console.ReadLine();
-
-
+            
             string cmdStr = $"update customer SET fname = '{firstname}', lname = '{lastname}', address = '{address}', phnum = {phonenumber} where cust_ID = {cid}";
             Console.WriteLine(cmdStr);
-
-
+            
             ExecuteSqlCmd(cmdStr);
         }
 
